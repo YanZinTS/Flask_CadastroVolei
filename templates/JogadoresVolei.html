@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+    <div>
+        <h1>{{ Titulo }}</h1>
+    </div>
+
+    {% for Jogadores in ListaVolei %}
+
+        <div class="volei-card">
+            <h2>Nome: {{ Jogadores.nome }}</h2>
+            <img src="static/volei.webp">
+            <p>Idade: {{ Jogadores.idade }} anos</p>
+            <p>Posição de jogo: {{ Jogadores.posicaoJogo }} </p>
+            <p>Nível de experiência: {{ Jogadores.nivelExperiencia }}</p>
+            <p>Cidade/Estado: {{ Jogadores.cidadeEestado }}</p>
+            <p>Dias: {{ Jogadores.dias }}</p>
+            <p>Horários: {{ Jogadores.horarios }}hrs</p>
+        <br>
+        </div>
+
+    {% endfor %}
+
+</body>
+</html>
